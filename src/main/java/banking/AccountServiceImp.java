@@ -14,7 +14,7 @@ public class AccountServiceImp implements AccountService {
     }
     @Override
     public Account createAccount(Customer client, AccountStrategy accountType, String accountNumber) {
-       Account account=new banking.BankAccount(client,accountType,0,accountNumber);
+       Account account=new BankAccount(client,accountType,0,accountNumber);
        accountDAO.addAccount(account.getAccountNumber(),account);
 return account;
     }
@@ -60,7 +60,7 @@ if (account== null){
     public void addInterest(String accountNumber) {
         double interest =0;
         Account account = getAccount(accountNumber);
-        double[] a =account.getAccountStrategy().execute(account.getBalance());
+        double[] a =account.getAccountType().execute(account.getBalance());
         interest= a[0];
         deposit(accountNumber,interest);
     }

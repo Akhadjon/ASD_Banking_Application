@@ -4,12 +4,12 @@ import java.util.List;
 
 public interface Account extends Observable {
     String getAccountName();
-    AccountStrategy getAccountStrategy();
+
     AccountTypeCommand getAccountType();
 
     String getAccountID();
     String getAccountNumber();
-        void setAccountNumber(String accountNumber);
+//        void setAccountNumber(String accountNumber);
     double getBalance();
     void deposit(double amount);
     void withdraw(double amount);

@@ -1,10 +1,7 @@
 package main.java.creditcard;
 
 import main.java.banking.PersonalAccount;
-import main.java.framework.Account;
-import main.java.framework.AccountEntry;
-import main.java.framework.AccountStrategy;
-import main.java.framework.Customer;
+import main.java.framework.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,17 +10,17 @@ import java.util.List;
 public class CreditCardAccount implements Account {
     private Customer customer;
     private double balance;
-    private AccountStrategy accountStrategy;
+    private AccountTypeCommand accountType;
     private String accountTypeName;
     private String accountNumber;
 
     private List<AccountEntry> entryList = new ArrayList<AccountEntry>();
 
-    public CreditCardAccount(Customer customer, AccountStrategy accountType, double balance, String accountNumber) {
+    public CreditCardAccount(Customer customer, AccountTypeCommand accountType, double balance, String accountNumber) {
         this.customer = customer;
-        this.accountStrategy = accountType;
+        this.accountType = accountType;
         this.balance = balance;
-        accountTypeName = this.accountStrategy.toString();
+        accountTypeName = this.accountType.toString();
         this.accountNumber = accountNumber;
         customer.setAccount(this);
     }
@@ -31,8 +28,8 @@ public class CreditCardAccount implements Account {
     public String getAccountName() {
         return accountTypeName;
     }
-    public AccountStrategy getAccountStrategy(){
-        return accountStrategy;
+    public AccountTypeCommand getAccountType(){
+        return accountType;
     }
 
     public String getAccountID() {
@@ -118,7 +115,7 @@ public class CreditCardAccount implements Account {
         fromAccountType[0] =0;
         fromAccountType[1] =0;
         if(previousBalance>0){
-            fromAccountType = accountStrategy.execute(previousBalance -totalPaymentOfThisMonth);
+            fromAccountType = accountType.execute(previousBalance -totalPaymentOfThisMonth);
         }
         double newBalance=0;
         if(previousBalance!=0){

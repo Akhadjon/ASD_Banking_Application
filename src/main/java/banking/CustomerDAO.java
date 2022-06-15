@@ -1,4 +1,4 @@
-package banking;
+package main.java.banking;
 
 public class CustomerDAO {
 }

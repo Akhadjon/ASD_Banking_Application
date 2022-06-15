@@ -1,4 +1,4 @@
-package banking;
+package main.java.banking;
 
 import main.java.framework.Account;
 import main.java.framework.Address;
@@ -51,5 +51,10 @@ public  class Company implements Customer {
     @Override
     public void setAccount(Account account) {
         myAccountList.add(account);
+    }
+
+    @Override
+    public void update() {
+
     }
 }
