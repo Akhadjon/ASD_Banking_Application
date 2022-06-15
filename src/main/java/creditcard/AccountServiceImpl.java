@@ -17,8 +17,8 @@ public class AccountServiceImpl implements AccountService {
         return accountService;
     }
 
-    @Override
-    public Account createAccount(Customer client, AccountStrategy accountType, String accountNumber) {
+    public Account createAccount(Customer client, AccountTypeCommand accountType, String accountNumber) {
+
         if(!customerDAO.findCustomer(client)){
             Account account = new CreditCardAccount(client,accountType,0,accountNumber);
             accountDAO.addAccount(account.getAccountNumber(),account);
