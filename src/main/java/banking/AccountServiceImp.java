@@ -13,7 +13,7 @@ public class AccountServiceImp implements AccountService {
         this.accountDAO=accountDAO;
     }
     @Override
-    public Account createAccount(Customer client, AccountStrategy accountType, String accountNumber) {
+    public Account createAccount(Customer client, AccountTypeCommand accountType, String accountNumber) {
        Account account=new BankAccount(client,accountType,0,accountNumber);
        accountDAO.addAccount(account.getAccountNumber(),account);
 return account;

@@ -1,9 +1,6 @@
 package main.java.banking;
 
-import main.java.framework.Account;
-import main.java.framework.AccountEntry;
-import main.java.framework.AccountStrategy;
-import main.java.framework.Customer;
+import main.java.framework.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +8,13 @@ import java.util.List;
 public class BankAccount implements Account {
     private Customer customer;
     private double balance;
-    private AccountStrategy accountType;
+    private AccountTypeCommand accountType;
     private String accoutTypeName;
     private String accountNumber;
 
     private List<AccountEntry> entryList = new ArrayList<AccountEntry>();
 
-    public BankAccount(Customer customer, AccountStrategy accountType, double balance, String accountNumber) {
+    public BankAccount(Customer customer, AccountTypeCommand accountType, double balance,String accountNumber) {
         this.customer = customer;
         this.accountType = accountType;
         this.balance = balance;
@@ -32,8 +29,13 @@ public class BankAccount implements Account {
     }
 
     @Override
-    public AccountStrategy getAccountStrategy() {
+    public AccountTypeCommand getAccountType() {
         return accountType;
+    }
+
+    @Override
+    public String getAccountID() {
+        return accountNumber;
     }
 
 
@@ -74,16 +76,16 @@ public class BankAccount implements Account {
 
     @Override
     public void addEntry(AccountEntry entry) {
-       entryList.add(entry) ;
+        entryList.add(entry) ;
     }
 
     @Override
     public void transferFunds(Account toAccount, double amount, String description) {
-AccountEntry fromEntry= new AccountEntry(-amount,description,toAccount.getAccountNumber(),toAccount.getCustomer().getFullName());
+        AccountEntry fromEntry= new AccountEntry(-amount,description,toAccount.getAccountNumber(),toAccount.getCustomer().getFullName());
 
-AccountEntry toEntry= new AccountEntry(amount,description,toAccount.getAccountNumber(),toAccount.getCustomer().getFullName());
-entryList.add(fromEntry);
-toAccount.addEntry(toEntry);
+        AccountEntry toEntry= new AccountEntry(amount,description,toAccount.getAccountNumber(),toAccount.getCustomer().getFullName());
+        entryList.add(fromEntry);
+        toAccount.addEntry(toEntry);
     }
 
     @Override
@@ -93,7 +95,7 @@ toAccount.addEntry(toEntry);
 
     @Override
     public void setCustomer(Customer customer) {
-          // wait
+        // wait
     }
 
     @Override
@@ -105,5 +107,10 @@ toAccount.addEntry(toEntry);
     @Override
     public String generateBill() {
         return null;
+    }
+
+    @Override
+    public void notifyObserver() {
+
     }
 }
