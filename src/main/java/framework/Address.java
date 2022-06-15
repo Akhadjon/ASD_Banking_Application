@@ -1,6 +1,7 @@
-package framework;
+package main.java.framework;
 
 public class Address {
+
     private String street;
     private String city;
     private String state;
@@ -41,4 +42,3 @@ public class Address {
                 '}';
     }
 }
-

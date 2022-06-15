@@ -1,6 +1,7 @@
-package framework;
+package main.java.framework;
 
-public interface Customer extends Observer {
+public interface Customer  extends Observer{
+
     String getFullName();
     String  getAge();
     String getEmail();

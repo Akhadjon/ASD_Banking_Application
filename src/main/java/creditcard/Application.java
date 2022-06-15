@@ -1,5 +1,4 @@
-package bank;
+package main.java.creditcard;
 
 public class Application {
-
 }
