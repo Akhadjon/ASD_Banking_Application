@@ -1,4 +1,4 @@
-package bankpattern;
+package main.java.bankpattern;
 
 import main.java.banking.AccountServiceImp;
 

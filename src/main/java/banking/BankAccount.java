@@ -1,4 +1,4 @@
-package banking;
+package main.java.banking;
 
 import main.java.framework.Account;
 import main.java.framework.AccountEntry;
