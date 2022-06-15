@@ -1,5 +1,4 @@
-package bankpattern;
-
+package main.java.bankpattern;
 import main.java.banking.AccountServiceImp;
 
 public abstract class Command {
@@ -8,7 +7,7 @@ public abstract class Command {
     public Command(AccountServiceImp accountService) {
         this.accountService = accountService;
     }
-    abstract double execute(String ID, double amount);
+    protected abstract double execute(String ID, double amount);
 }
 
 
