@@ -1,8 +1,8 @@
 package bankpattern;
 
-import banking.AccountServiceImp;
+import main.java.banking.AccountServiceImp;
 
-public class Withdraw extends Command {
+public class Withdraw extends bankpattern.Command {
 
     public Withdraw(AccountServiceImp accountService) {
         super(accountService);

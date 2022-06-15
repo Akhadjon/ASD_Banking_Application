@@ -1,8 +1,8 @@
 package bankpattern;
 
-import banking.AccountServiceImp;
+import main.java.banking.AccountServiceImp;
 
-public class Deposit extends Command {
+public class Deposit extends bankpattern.Command {
     public Deposit(AccountServiceImp accountService) {
         super(accountService);
     }

@@ -23,15 +23,15 @@ public class CreditCustomerDAO implements CustomerDAO {
     @Override
     public boolean findCustomer(Customer customer) {
         if(null == customer.getID()) return false;
-        return customerList.containsKey(customer.getID());    }
+        return customerList.containsKey(customer.getID());
+    }
 
     @Override
     public Customer getCustomer(Customer customer) {
         if(null == customer.getID()) return null;
         if(findCustomer(customer)){
             return customerList.get(customer.getID());
-        }
-        return null;
+        }return null;
     }
 
     @Override
@@ -41,7 +41,6 @@ public class CreditCustomerDAO implements CustomerDAO {
             customerList.remove(customer.getID());
             customerList.put(customer.getID(),customer);
             return true;
-        }
-        return false;
+        }return false;
     }
 }

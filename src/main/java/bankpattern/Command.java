@@ -1,6 +1,6 @@
 package bankpattern;
 
-import banking.AccountServiceImp;
+import main.java.banking.AccountServiceImp;
 
 public abstract class Command {
     AccountServiceImp accountService;

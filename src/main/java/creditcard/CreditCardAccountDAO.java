@@ -9,41 +9,34 @@ public class CreditCardAccountDAO implements AccountDAO {
     private HashMap<String, Account> creditCardMap;
 
     public CreditCardAccountDAO() {
-        this.creditCardMap = new HashMap<>();
+        creditCardMap = new HashMap<>();
     }
 
-    @Override
-    public boolean findAccount(String accountNumber) {
-        if (null == accountNumber) return false;
-        if (creditCardMap.containsKey(accountNumber)) return true;
+    public boolean findAccount(String accountNumber){
+        if(null == accountNumber) return false;
+        if(creditCardMap.containsKey(accountNumber)) return true;
         return false;
     }
-
-    @Override
-    public void addAccount(String accountNumber, Account account) {
-        if (null != account.getAccountNumber())
-            if (!findAccount(account.getAccountNumber())) {
-                creditCardMap.put(account.getAccountNumber(), account);
-            }
+    public void addAccount(String ID, Account account){
+        if(null != account.getAccountNumber())
+        if(!findAccount(account.getAccountNumber())){
+            creditCardMap.put(account.getAccountNumber(),account);
+        }
     }
 
-    @Override
-    public Account getAccount(String accountNumber) {
+    public Account getAccount(String accountNumber){
         if(null == accountNumber) return null;
         if(findAccount(accountNumber)){
             return creditCardMap.get(accountNumber);
-        }
-        return null;
+        }return null;
     }
 
-    @Override
-    public boolean updateAccount(Account account) {
+    public boolean updateAccount(Account account){
         if(null == account) return false;
         if(findAccount(account.getAccountNumber())){
             creditCardMap.remove(account.getAccountNumber());
             creditCardMap.put(account.getAccountNumber(),account);
             return true;
-        }
-        return false;
+        }return false;
     }
 }

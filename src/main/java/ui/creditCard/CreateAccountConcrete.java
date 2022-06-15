@@ -1,10 +1,15 @@
 package main.java.ui.creditCard;
 
-import framework.Common.Account;
-import framework.Common.AccountTypeCommand;
-import framework.Common.Address;
-import framework.Common.Customer;
-import framework.ccard.*;
+import main.java.banking.CompanyAccount;
+import main.java.banking.PersonalAccount;
+import main.java.creditcard.AccountServiceImpl;
+import main.java.creditcard.BronzeAccount;
+import main.java.creditcard.GoldAccount;
+import main.java.creditcard.SilverAccount;
+import main.java.framework.Account;
+import main.java.framework.AccountTypeCommand;
+import main.java.framework.Address;
+import main.java.framework.Customer;
 
 public class CreateAccountConcrete extends TemplateToCreateAccount {
     public CreateAccountConcrete(AccountServiceImpl accountService) {
