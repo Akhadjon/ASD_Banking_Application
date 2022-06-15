@@ -3,7 +3,7 @@ package main.java.creditcard;
 import main.java.banking.PersonalAccount;
 import main.java.framework.Account;
 import main.java.framework.AccountEntry;
-import main.java.framework.AccountType;
+import main.java.framework.AccountStrategy;
 import main.java.framework.Customer;
 
 import java.time.LocalDate;
@@ -13,17 +13,17 @@ import java.util.List;
 public class CreditCardAccount implements Account {
     private Customer customer;
     private double balance;
-    private AccountType accountType;
+    private AccountStrategy accountStrategy;
     private String accountTypeName;
     private String accountNumber;
 
     private List<AccountEntry> entryList = new ArrayList<AccountEntry>();
 
-    public CreditCardAccount(Customer customer, AccountType accountType, double balance, String accountNumber) {
+    public CreditCardAccount(Customer customer, AccountStrategy accountType, double balance, String accountNumber) {
         this.customer = customer;
-        this.accountType = accountType;
+        this.accountStrategy = accountType;
         this.balance = balance;
-        accountTypeName = this.accountType.toString();
+        accountTypeName = this.accountStrategy.toString();
         this.accountNumber = accountNumber;
         customer.setAccount(this);
     }
@@ -31,8 +31,8 @@ public class CreditCardAccount implements Account {
     public String getAccountName() {
         return accountTypeName;
     }
-    public AccountType getAccountType(){
-        return accountType;
+    public AccountStrategy getAccountStrategy(){
+        return accountStrategy;
     }
 
     public String getAccountID() {
@@ -118,7 +118,7 @@ public class CreditCardAccount implements Account {
         fromAccountType[0] =0;
         fromAccountType[1] =0;
         if(previousBalance>0){
-            fromAccountType = accountType.execute(previousBalance -totalPaymentOfThisMonth);
+            fromAccountType = accountStrategy.execute(previousBalance -totalPaymentOfThisMonth);
         }
         double newBalance=0;
         if(previousBalance!=0){

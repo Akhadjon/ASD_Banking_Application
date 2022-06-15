@@ -2,7 +2,7 @@ package banking;
 
 import main.java.framework.Account;
 import main.java.framework.AccountEntry;
-import main.java.framework.AccountType;
+import main.java.framework.AccountStrategy;
 import main.java.framework.Customer;
 
 import java.util.ArrayList;
@@ -11,13 +11,13 @@ import java.util.List;
 public class BankAccount implements Account {
     private Customer customer;
     private double balance;
-    private AccountType accountType;
+    private AccountStrategy accountType;
     private String accoutTypeName;
     private String accountNumber;
 
     private List<AccountEntry> entryList = new ArrayList<AccountEntry>();
 
-    public BankAccount(Customer customer, AccountType accountType, double balance,String accountNumber) {
+    public BankAccount(Customer customer, AccountStrategy accountType, double balance, String accountNumber) {
         this.customer = customer;
         this.accountType = accountType;
         this.balance = balance;
@@ -32,7 +32,7 @@ public class BankAccount implements Account {
     }
 
     @Override
-    public AccountType getAccountType() {
+    public AccountStrategy getAccountStrategy() {
         return accountType;
     }
 

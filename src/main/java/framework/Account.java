@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface Account extends Observable {
     String getAccountName();
-    AccountType getAccountType();
+    AccountStrategy getAccountStrategy();
     String getAccountID();
     String getAccountNumber();
     //    void setAccountNumber(String accountNumber);

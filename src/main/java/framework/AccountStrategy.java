@@ -1,6 +1,6 @@
 package main.java.framework;
 
-public interface AccountType {
+public interface AccountStrategy {
     double[] execute(double credit);
     String getAccountTypeName();
 }

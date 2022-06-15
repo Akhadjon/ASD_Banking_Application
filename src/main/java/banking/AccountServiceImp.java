@@ -1,4 +1,4 @@
-package banking;
+package main.java.banking;
 
 import main.java.framework.*;
 
@@ -13,8 +13,8 @@ public class AccountServiceImp implements AccountService {
         this.accountDAO=accountDAO;
     }
     @Override
-    public Account createAccount(Customer client, AccountType accountType, String accountNumber) {
-       Account account=new BankAccount(client,accountType,0,accountNumber);
+    public Account createAccount(Customer client, AccountStrategy accountType, String accountNumber) {
+       Account account=new banking.BankAccount(client,accountType,0,accountNumber);
        accountDAO.addAccount(account.getAccountNumber(),account);
 return account;
     }
@@ -60,7 +60,7 @@ if (account== null){
     public void addInterest(String accountNumber) {
         double interest =0;
         Account account = getAccount(accountNumber);
-        double[] a =account.getAccountType().execute(account.getBalance());
+        double[] a =account.getAccountStrategy().execute(account.getBalance());
         interest= a[0];
         deposit(accountNumber,interest);
     }

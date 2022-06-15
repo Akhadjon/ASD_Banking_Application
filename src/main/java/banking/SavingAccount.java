@@ -1,8 +1,8 @@
 package banking;
 
-import main.java.framework.AccountType;
+import main.java.framework.AccountStrategy;
 
-public class SavingAccount implements AccountType {
+public class SavingAccount implements AccountStrategy {
     @Override
     public double[] execute(double amount) {
         double[] s = new double[1];
