@@ -1,6 +1,6 @@
 package main.java.ui.banking;
 
-import framework.bank.*;
+//import main.java.banking;
 import main.java.banking.CompanyAccount;
 import main.java.banking.PersonalAccount;
 import main.java.creditcard.AccountServiceImpl;
