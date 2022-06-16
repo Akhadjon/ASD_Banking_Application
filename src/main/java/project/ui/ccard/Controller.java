@@ -1,8 +1,8 @@
 package project.ui.ccard;
 
+import project.framwork.CodeGenerator;
 import project.framwork.TemplateToCreateAccount;
 import project.ccard.AccountServiceImpl;
-import project.ccard.CCodeGenerator;
 import project.framwork.command.AccountDeposit;
 import project.framwork.command.AccountWithdraw;
 import project.framwork.command.AddInterest;
@@ -14,7 +14,7 @@ public class Controller {
     public static AccountDeposit accountDeposit;
     public static AccountWithdraw accountWithdraw;
     public static AddInterest addInterest;
-    public static CCodeGenerator accountNumberGenerator = CCodeGenerator.myAccountGenerator();
+    public static CodeGenerator accountNumberGenerator = CodeGenerator.myAccountGenerator();
 
     public static String[] createAccount(String name,String street,String city,String state,String zip,String email,String ID,String dateOfBirth, String customerType,String accountType){
         String code= accountNumberGenerator.generateCode();
