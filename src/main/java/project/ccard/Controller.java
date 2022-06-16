@@ -1,5 +1,6 @@
 package project.ccard;
 
+import project.framwork.command.Command;
 import project.framwork.util.CodeGenerator;
 import project.framwork.TemplateToCreateAccount;
 import project.framwork.command.AccountDeposit;
@@ -11,9 +12,7 @@ public class Controller {
     public static AccountServiceImpl accountService = AccountServiceImpl.myAccountService();
     public static TemplateToCreateAccount templateToCreateAccount = new CreateAccountConcrete(accountService);
     public static AccountDisplayer displayer;
-    public static AccountDeposit accountDeposit;
-    public static AccountWithdraw accountWithdraw;
-    public static AddInterest addInterest;
+    public static Command command;
     public static CodeGenerator accountNumberGenerator = CodeGenerator.myAccountGenerator();
 
     public static String[] createAccount(String name,String street,String city,String state,String zip,String email,String ID,String dateOfBirth, String customerType,String accountType){
@@ -31,18 +30,18 @@ public class Controller {
     }
 
     public static double deposit(String ID, double amount){
-        accountDeposit = new AccountDeposit(accountService);
-        return accountDeposit.execute(ID, amount);
+        command = new AccountDeposit(accountService);
+        return command.execute(ID, amount);
     }
 
     public static double withdraw(String ID, double amount){
-        accountWithdraw = new AccountWithdraw(accountService);
-        return accountWithdraw.execute(ID, amount);
+        command = new AccountWithdraw(accountService);
+        return command.execute(ID, amount);
     }
 
     public static double addInterest(String ID, double amount){
-        addInterest = new AddInterest(accountService);
-        return addInterest.execute(ID, amount);
+        command = new AddInterest(accountService);
+        return command.execute(ID, amount);
     }
 
     public static String generateReport(String ID){

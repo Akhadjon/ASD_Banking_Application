@@ -93,7 +93,7 @@ public class AccountServiceImpl implements AccountService {
         String result="";
         List<AccountEntry> List = new ArrayList<>();
         Account account = getAccount(accountNumber);
-        List= account.getEntryList();
+        List = account.getEntryList();
         for(AccountEntry e: List){
             result+=(e.report()+ " \n");
         }
