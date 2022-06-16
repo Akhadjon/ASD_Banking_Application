@@ -1,5 +1,7 @@
 package project.ui.ccard;
 
+import project.framwork.ui.JDialogGenBill;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;

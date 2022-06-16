@@ -1,6 +1,8 @@
 package project.ui.bank;
 
 
+import project.framwork.util.JDialogGenBill;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;

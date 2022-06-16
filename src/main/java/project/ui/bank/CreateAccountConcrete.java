@@ -1,9 +1,13 @@
 package project.ui.bank;
 
+import project.bank.strategy.CheckingAccount;
+import project.bank.strategy.SavingAccount;
 import project.framwork.*;
-import project.bank.*;
 import project.framwork.model.Account;
+import project.framwork.model.CompanyAccount;
 import project.framwork.model.Customer;
+import project.framwork.model.PersonalAccount;
+import project.framwork.strategy.AccountType;
 
 public class CreateAccountConcrete extends TemplateToCreateAccount {
     public CreateAccountConcrete(AccountService accountService) {

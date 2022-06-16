@@ -1,7 +1,6 @@
 package project.framwork.model;
 
-import project.framwork.AccountEntry;
-import project.framwork.AccountType;
+import project.framwork.strategy.AccountType;
 import project.framwork.observer.Observable;
 
 import java.util.List;

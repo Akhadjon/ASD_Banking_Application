@@ -1,7 +1,7 @@
 package project.ui.bank;
 
 import project.framwork.model.Account;
-import project.bank.PersonalAccount;
+import project.framwork.model.PersonalAccount;
 
 public class AccountDisplayer {
     Account account;

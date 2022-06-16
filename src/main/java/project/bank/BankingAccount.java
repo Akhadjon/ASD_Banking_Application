@@ -2,8 +2,9 @@ package project.bank;
 
 
 import project.framwork.model.Account;
-import project.framwork.AccountEntry;
-import project.framwork.AccountType;
+import project.framwork.model.AccountEntry;
+import project.framwork.model.PersonalAccount;
+import project.framwork.strategy.AccountType;
 import project.framwork.model.Customer;
 
 import java.util.ArrayList;

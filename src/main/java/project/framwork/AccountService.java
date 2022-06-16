@@ -2,6 +2,7 @@ package project.framwork;
 
 import project.framwork.model.Account;
 import project.framwork.model.Customer;
+import project.framwork.strategy.AccountType;
 
 public interface AccountService {
     Account createAccount(Customer client, AccountType accountType, String accountNumber);

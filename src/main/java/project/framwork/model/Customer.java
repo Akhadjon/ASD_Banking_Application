@@ -1,7 +1,7 @@
 package project.framwork.model;
 
 import project.framwork.Address;
-import project.framwork.util.Observer;
+import project.framwork.observer.Observer;
 
 public interface Customer extends Observer {
     String getFullName();

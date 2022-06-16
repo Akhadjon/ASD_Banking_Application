@@ -7,6 +7,7 @@ import project.framwork.dataAccess.CustomerDAOImplementation;
 import project.framwork.dataAccess.CustomerDAO;
 import project.framwork.model.Account;
 import project.framwork.model.Customer;
+import project.framwork.strategy.AccountType;
 
 public class AccountServiceImpl implements AccountService {
     private AccountDAO accountDAO;

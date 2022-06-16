@@ -1,4 +1,4 @@
-package project.framwork.util;
+package project.framwork.observer;
 
 public interface Observer {
     void update();

@@ -2,6 +2,7 @@ package project.ui.ccard;
 
 import project.framwork.model.Account;
 import project.ccard.*;
+import project.framwork.model.PersonalAccount;
 
 public class AccountDisplayer {
     Account account;

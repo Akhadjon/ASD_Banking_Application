@@ -2,6 +2,7 @@ package project.framwork;
 
 import project.framwork.model.Account;
 import project.framwork.model.Customer;
+import project.framwork.strategy.AccountType;
 
 public abstract class TemplateToCreateAccount {
     private Address address;
@@ -28,7 +29,7 @@ public abstract class TemplateToCreateAccount {
     }
     public abstract Address createAddress(String street, String city, String state, String zip);
     public abstract Customer createCustomer(String name, String ID, String email, String dateOfBirth, Address address, String customerType);
-    public abstract project.framwork.AccountType createAccountType(String accountType);
+    public abstract AccountType createAccountType(String accountType);
     public abstract Account createAccount(Customer customer, AccountType accountType,String accountNumber);
 
 }
