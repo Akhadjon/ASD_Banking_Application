@@ -9,5 +9,5 @@ public abstract class Command {
     public Command(AccountService accountService) {
         this.accountService = accountService;
     }
-    abstract double execute(String ID, double amount);
+    public abstract double execute(String ID, double amount);
 }

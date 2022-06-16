@@ -1,6 +1,7 @@
 package project.ui.bank;
 
 
+import project.bank.Controller;
 import project.framwork.util.JDialogGenBill;
 
 import javax.swing.*;

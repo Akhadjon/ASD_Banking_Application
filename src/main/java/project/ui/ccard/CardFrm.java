@@ -1,5 +1,6 @@
 package project.ui.ccard;
 
+import project.ccard.Controller;
 import project.framwork.ui.JDialogGenBill;
 
 import javax.swing.*;
