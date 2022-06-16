@@ -2,6 +2,8 @@ package project.ui.bank;
 
 import project.framwork.*;
 import project.bank.*;
+import project.framwork.model.Account;
+import project.framwork.model.Customer;
 
 public class CreateAccountConcrete extends TemplateToCreateAccount {
     public CreateAccountConcrete(AccountService accountService) {

@@ -1,8 +1,8 @@
 package project.bank;
-import project.framwork.Account;
+import project.framwork.model.Account;
 import project.framwork.Address;
-import project.framwork.Customer;
-import project.framwork.Observer;
+import project.framwork.model.Customer;
+import project.framwork.util.Observer;
 
 import java.util.ArrayList;
 import java.util.List;

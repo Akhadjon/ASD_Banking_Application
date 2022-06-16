@@ -1,7 +1,7 @@
 package project.ui.bank;
 
 import project.bank.AccountServiceImpl;
-import project.framwork.CodeGenerator;
+import project.framwork.util.CodeGenerator;
 import project.framwork.TemplateToCreateAccount;
 import project.framwork.command.AccountDeposit;
 import project.framwork.command.AccountWithdraw;

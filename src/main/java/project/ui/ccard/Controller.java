@@ -1,6 +1,6 @@
 package project.ui.ccard;
 
-import project.framwork.CodeGenerator;
+import project.framwork.util.CodeGenerator;
 import project.framwork.TemplateToCreateAccount;
 import project.ccard.AccountServiceImpl;
 import project.framwork.command.AccountDeposit;

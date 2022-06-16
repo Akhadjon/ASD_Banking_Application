@@ -1,5 +1,8 @@
 package project.framwork;
 
+import project.framwork.model.Account;
+import project.framwork.model.Customer;
+
 public interface AccountService {
     Account createAccount(Customer client, AccountType accountType, String accountNumber);
     Account getAccount(String accountNumber);

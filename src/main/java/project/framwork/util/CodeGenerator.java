@@ -1,8 +1,8 @@
-package project.framwork;
+package project.framwork.util;
 
 import java.util.Random;
 
-public class CodeGenerator implements AccNumGenerator{
+public class CodeGenerator implements AccNumGenerator {
     private CodeGenerator() {
     }
     private final static CodeGenerator AccountGeneratorInstance = new CodeGenerator();

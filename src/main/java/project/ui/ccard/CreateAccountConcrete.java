@@ -2,6 +2,8 @@ package project.ui.ccard;
 
 import project.framwork.*;
 import project.ccard.*;
+import project.framwork.model.Account;
+import project.framwork.model.Customer;
 
 public class CreateAccountConcrete extends TemplateToCreateAccount {
 

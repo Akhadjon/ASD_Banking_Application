@@ -1,6 +1,6 @@
 package project.ui.ccard;
 
-import project.framwork.Account;
+import project.framwork.model.Account;
 import project.ccard.*;
 
 public class AccountDisplayer {

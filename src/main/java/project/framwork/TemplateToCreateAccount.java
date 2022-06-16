@@ -1,5 +1,8 @@
 package project.framwork;
 
+import project.framwork.model.Account;
+import project.framwork.model.Customer;
+
 public abstract class TemplateToCreateAccount {
     private Address address;
     private Customer customer;

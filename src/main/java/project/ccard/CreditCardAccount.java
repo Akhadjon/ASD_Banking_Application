@@ -1,9 +1,9 @@
 package project.ccard;
 
-import project.framwork.Account;
+import project.framwork.model.Account;
 import project.framwork.AccountEntry;
 import project.framwork.AccountType;
-import project.framwork.Customer;
+import project.framwork.model.Customer;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

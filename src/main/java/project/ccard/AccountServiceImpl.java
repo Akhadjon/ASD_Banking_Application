@@ -1,14 +1,20 @@
 package project.ccard;
 
 import project.framwork.*;
+import project.framwork.dataAccess.AccountDAO;
+import project.framwork.dataAccess.AccountDAOImplementation;
+import project.framwork.dataAccess.CustomerDAOImplementation;
+import project.framwork.dataAccess.CustomerDAO;
+import project.framwork.model.Account;
+import project.framwork.model.Customer;
 
 public class AccountServiceImpl implements AccountService {
     private AccountDAO accountDAO;
     private CustomerDAO customerDAO;
 
     private AccountServiceImpl(){
-        accountDAO = new CreditCardAccountDAO();
-        customerDAO = new CreditCustomerDAO();
+        accountDAO = new AccountDAOImplementation();
+        customerDAO = new CustomerDAOImplementation();
     }
 
     private final static AccountServiceImpl accountService = new AccountServiceImpl();

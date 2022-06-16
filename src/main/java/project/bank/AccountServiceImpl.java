@@ -2,6 +2,12 @@ package project.bank;
 
 
 import project.framwork.*;
+import project.framwork.dataAccess.AccountDAO;
+import project.framwork.dataAccess.AccountDAOImplementation;
+import project.framwork.dataAccess.CustomerDAO;
+import project.framwork.dataAccess.CustomerDAOImplementation;
+import project.framwork.model.Account;
+import project.framwork.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +17,8 @@ public class AccountServiceImpl implements AccountService {
     private CustomerDAO customerDAO;
 
     private AccountServiceImpl(){
-        accountDAO = new BankingAccountDAO();
-        customerDAO = new BankingCustomerDAO();
+        accountDAO = new AccountDAOImplementation();
+        customerDAO = new CustomerDAOImplementation();
     }
     private final static AccountServiceImpl accountService = new AccountServiceImpl();
 
