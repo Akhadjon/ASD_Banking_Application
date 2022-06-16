@@ -1,10 +1,11 @@
 package project.framwork.command;
 
 import project.ccard.*;
+import project.framwork.AccountService;
 import project.framwork.command.Command;
 
 public class AddInterest extends Command {
-    public AddInterest(AccountServiceImpl accountService) {
+    public AddInterest(AccountService accountService) {
         super(accountService);
     }
 

@@ -1,10 +1,11 @@
 package project.framwork.command;
 
 import project.ccard.*;
+import project.framwork.AccountService;
 import project.framwork.command.Command;
 
 public class AccountDeposit extends Command {
-    public AccountDeposit(AccountServiceImpl accountService) {
+    public AccountDeposit(AccountService accountService) {
         super(accountService);
     }
 

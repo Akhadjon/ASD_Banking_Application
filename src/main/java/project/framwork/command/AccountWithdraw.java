@@ -2,10 +2,11 @@ package project.framwork.command;
 
 
 import project.ccard.*;
+import project.framwork.AccountService;
 import project.framwork.command.Command;
 
 public class AccountWithdraw extends Command {
-    public AccountWithdraw(AccountServiceImpl accountService) {
+    public AccountWithdraw(AccountService accountService) {
         super(accountService);
     }
 
